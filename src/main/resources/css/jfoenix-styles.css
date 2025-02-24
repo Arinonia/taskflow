@@ -1,0 +1,370 @@
+/* Styles généraux pour l'application */
+.root {
+    -fx-background-color: #0f172a;
+    -fx-font-family: 'System';
+}
+
+/* Couleurs principales */
+* {
+    -fx-primary: #0ea5e9;
+    -fx-primary-light: #38bdf8;
+    -fx-primary-dark: #0284c7;
+    -fx-secondary: #6366f1;
+    -fx-secondary-light: #818cf8;
+    -fx-dark-bg: #0f172a;
+    -fx-card-bg: #1e293b;
+    -fx-sidebar-bg: #1e293b;
+}
+
+/* Text */
+.label {
+    -fx-text-fill: #e2e8f0;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+}
+
+.subtitle-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #94a3b8;
+}
+
+.section-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+    -fx-padding: 8 0 4 0;
+}
+
+/* JFXButton */
+.jfx-button {
+    -jfx-button-type: RAISED;
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 15 10 15;
+}
+
+.jfx-button.button-primary {
+    -fx-background-color: -fx-primary;
+}
+
+.jfx-button.button-secondary {
+    -fx-background-color: -fx-secondary;
+}
+
+.jfx-button.button-flat {
+    -jfx-button-type: FLAT;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-primary;
+}
+
+.jfx-button.button-danger {
+    -fx-background-color: #ef4444;
+}
+
+.jfx-button.button-outline {
+    -jfx-button-type: FLAT;
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 1;
+    -fx-text-fill: -fx-primary;
+}
+
+/* JFXTextField et JFXTextArea */
+.jfx-text-field, .jfx-text-area {
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-text-fill: #e2e8f0;
+    -jfx-focus-color: -fx-primary;
+    -jfx-unfocus-color: #475569;
+    -fx-padding: 5 0 5 0;
+}
+
+/* JFXComboBox */
+.jfx-combo-box {
+    -jfx-focus-color: -fx-primary;
+    -jfx-unfocus-color: #475569;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-text-fill: #e2e8f0;
+}
+
+.jfx-combo-box .cell:selected {
+    -fx-text-fill: #e2e8f0;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -fx-card-bg;
+    -fx-border-color: #475569;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: -fx-card-bg;
+    -fx-text-fill: #e2e8f0;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #334155;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+
+/* JFXCheckBox */
+.jfx-check-box {
+    -jfx-checked-color: -fx-primary;
+    -jfx-unchecked-color: #64748b;
+    -fx-text-fill: #e2e8f0;
+}
+
+/* JFXListView */
+.jfx-list-view {
+    -fx-background-color: transparent;
+}
+
+.jfx-list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e2e8f0;
+    -fx-padding: 10;
+}
+
+.jfx-list-view .list-cell:hover {
+    -fx-background-color: #334155;
+}
+
+.jfx-list-view .list-cell:selected {
+    -fx-background-color: #0284c7;
+}
+
+/* Carte de statistiques */
+.stat-card {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 4);
+}
+
+.stat-value {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e2e8f0;
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #94a3b8;
+}
+
+/* Élément de tâche */
+.task-item {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 4;
+    -fx-padding: 12;
+    -fx-border-color: #334155;
+    -fx-border-radius: 4;
+    -fx-border-width: 0 0 1 0;
+}
+
+.task-item:hover {
+    -fx-background-color: #334155;
+}
+
+.task-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e2e8f0;
+}
+
+.task-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #94a3b8;
+}
+
+.task-completed .task-title {
+    -fx-strikethrough: true;
+    -fx-text-fill: #64748b;
+}
+
+/* Badge */
+.badge {
+    -fx-background-radius: 4;
+    -fx-padding: 2 8 2 8;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.badge-primary {
+    -fx-background-color: rgba(14, 165, 233, 0.2);
+    -fx-text-fill: #38bdf8;
+}
+
+.badge-secondary {
+    -fx-background-color: rgba(99, 102, 241, 0.2);
+    -fx-text-fill: #818cf8;
+}
+
+.badge-low {
+    -fx-background-color: rgba(102, 153, 204, 0.2);
+    -fx-text-fill: #6699CC;
+}
+
+.badge-medium {
+    -fx-background-color: rgba(249, 145, 87, 0.2);
+    -fx-text-fill: #F99157;
+}
+
+.badge-high {
+    -fx-background-color: rgba(236, 95, 103, 0.2);
+    -fx-text-fill: #EC5f67;
+}
+
+/* Barre latérale */
+.sidebar {
+    -fx-background-color: -fx-sidebar-bg;
+    -fx-padding: 20;
+}
+
+.sidebar-item {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-padding: 10;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #334155;
+    -fx-cursor: hand;
+}
+
+.sidebar-item-selected {
+    -fx-background-color: rgba(14, 165, 233, 0.2);
+}
+
+/* En-tête */
+.header {
+    -fx-background-color: #0f172a;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 4);
+}
+
+/* Formulaire */
+.form-container {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+/* Scrollbar */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #1e293b;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #475569;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* Rippler effect */
+.jfx-rippler {
+    -jfx-rippler-fill: #475569;
+}
+
+/* Styles améliorés pour les ComboBox et popups */
+
+/* Style général des ComboBox */
+.combo-box {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-background-radius: 4;
+    -fx-border-color: #475569;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 4;
+}
+
+.combo-box:focused {
+    -fx-border-color: #0ea5e9;
+    -fx-border-width: 2;
+}
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+/* Style des popups */
+.combo-box-popup {
+    -fx-background-color: #1e293b;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1e293b;
+    -fx-background: #1e293b;
+    -fx-control-inner-background: #1e293b;
+    -fx-border-color: #475569;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+    -fx-padding: 6 8;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #475569;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #0ea5e9;
+    -fx-text-fill: white;
+}
+
+/* Scrollbars dans les popups */
+.combo-box-popup .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+
+.combo-box-popup .scroll-bar .track {
+    -fx-background-color: #1e293b;
+    -fx-border-color: transparent;
+}
+
+.combo-box-popup .scroll-bar .thumb {
+    -fx-background-color: #475569;
+    -fx-background-radius: 3;
+}
+
+.combo-box-popup .scroll-bar .increment-button,
+.combo-box-popup .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Style pour les cellules de ComboBox spécifiques aux priorités */
+.priority-combo-box .list-cell {
+    -fx-background-color: #334155;
+}
+
+.priority-combo-box .list-cell:selected {
+    -fx-background-color: #0ea5e9;
+}
